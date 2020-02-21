@@ -1046,8 +1046,8 @@ MonoBehaviour:
   - {fileID: 617769658}
   - {fileID: 552515038}
   - {fileID: 930336110}
-  expectedValue: 20
-  timer: 25
+  expectedValue: 532
+  timer: 55
 --- !u!4 &398459755
 Transform:
   m_ObjectHideFlags: 0
@@ -4554,11 +4554,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: ore
       objectReference: {fileID: 0}
-    - target: {fileID: 1366051787357777117, guid: 2c4c1b50893ea4248a330165d1941825,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2643165497308847822, guid: 2c4c1b50893ea4248a330165d1941825,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6527,7 +6522,7 @@ PrefabInstance:
     - target: {fileID: 4649893121409356692, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7573737468869135987, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}

@@ -19,7 +19,7 @@ public class HookScript : MonoBehaviour
         {
             spoolScript.pullbackHook = true;
             float _pull_back_speed = other.gameObject.GetComponent<GemScript>()._retractionSpeed;
-            spoolScript.pullback_Speed = spoolScript.ifhookemptySpeed - (_pull_back_speed * 2);
+            spoolScript.pullback_Speed = spoolScript.ifhookemptySpeed - (_pull_back_speed * 4);
             if (_pull_back_speed <= 0)
             {
                 _pull_back_speed = 20f;

@@ -1046,8 +1046,8 @@ MonoBehaviour:
   - {fileID: 617769658}
   - {fileID: 552515038}
   - {fileID: 930336110}
-  expectedValue: 20
-  timer: 25
+  expectedValue: 1422
+  timer: 50
 --- !u!4 &398459755
 Transform:
   m_ObjectHideFlags: 0
@@ -5134,7 +5134,7 @@ PrefabInstance:
     - target: {fileID: 4649893121409356692, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7573737468869135987, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}
@@ -5169,12 +5169,12 @@ PrefabInstance:
     - target: {fileID: 8564972313189409159, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29
+      value: 10.8
       objectReference: {fileID: 0}
     - target: {fileID: 8564972313189409159, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.9
+      value: -19.1
       objectReference: {fileID: 0}
     - target: {fileID: 8564972313189409159, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}
@@ -6152,7 +6152,7 @@ PrefabInstance:
     - target: {fileID: 1752700701767903202, guid: 26b3cb9182f41894c864b7dfa086a008,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.22
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 1752700701767903202, guid: 26b3cb9182f41894c864b7dfa086a008,
         type: 3}
@@ -6527,7 +6527,7 @@ PrefabInstance:
     - target: {fileID: 4649893121409356692, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7573737468869135987, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}
@@ -6557,12 +6557,12 @@ PrefabInstance:
     - target: {fileID: 8564972313189409159, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.62
+      value: 27.3
       objectReference: {fileID: 0}
     - target: {fileID: 8564972313189409159, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.66
+      value: -14.9
       objectReference: {fileID: 0}
     - target: {fileID: 8564972313189409159, guid: 39a58a6f1e59d584b852a8f4fe0e1580,
         type: 3}

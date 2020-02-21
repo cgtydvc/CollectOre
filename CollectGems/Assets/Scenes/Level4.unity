@@ -230,7 +230,7 @@ PrefabInstance:
     - target: {fileID: 6084990447948001113, guid: 26b3cb9182f41894c864b7dfa086a008,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9067082686043577542, guid: 26b3cb9182f41894c864b7dfa086a008,
         type: 3}
@@ -1046,8 +1046,8 @@ MonoBehaviour:
   - {fileID: 617769658}
   - {fileID: 552515038}
   - {fileID: 930336110}
-  expectedValue: 20
-  timer: 25
+  expectedValue: 114
+  timer: 30
 --- !u!4 &398459755
 Transform:
   m_ObjectHideFlags: 0

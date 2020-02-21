@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpoolScript : MonoBehaviour
 {
+    public GameObject pickup;
     public GameManager manager;
     public Transform hook;
     public bool throwtheHook = false;
@@ -17,10 +18,12 @@ public class SpoolScript : MonoBehaviour
         if (throwtheHook == true)
         {
             hook.gameObject.GetComponent<Rigidbody>().velocity = Vector3.down * Time.deltaTime * throw_Speed;
+            pickup.GetComponentInChildren<PickupScript>().enabled = false;
         }
         if (pullbackHook == true)
         {
             hook.gameObject.GetComponent<Rigidbody>().velocity = -Vector3.down * Time.deltaTime * throw_Speed;
+            pickup.GetComponentInChildren<PickupScript>().enabled = false;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -33,7 +36,8 @@ public class SpoolScript : MonoBehaviour
             hook.parent = transform;
             if (hook.childCount > 0)
             {
-                manager.increasetoMoney(hook.GetComponentInChildren<GemScript>()._initialValue);
+                manager.increaseCurrentValue(hook.GetComponentInChildren<GemScript>()._initialValue);
+                pickup.GetComponentInChildren<PickupScript>().enabled = true;
                 Destroy(hook.GetChild(0).gameObject);
             }
             pullback_Speed = ifhookemptySpeed;

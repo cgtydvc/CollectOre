@@ -20,17 +20,24 @@ public class GemScript : MonoBehaviour
         if (stone == true)
         {
             GetComponent<MeshRenderer>().material = stoneMat;
-            _initialValue = (int)_retractionSpeed;
+            _initialValue = (int)_retractionSpeed/2;
         }
         if (gold == true)
         {
             GetComponent<MeshRenderer>().material = goldMat;
-            _initialValue = (int)_retractionSpeed * 3;
+            _initialValue = (int)_retractionSpeed * 22;
         }
         if (diamond == true)
         {
-            GetComponentInChildren<MeshRenderer>().material = diamondMat;
-            _initialValue = 500;
+            GetComponent<MeshRenderer>().material = diamondMat;
+            if (transform.localScale.x >=10f)
+            {
+                _initialValue = 500;
+            }
+            else
+            {
+                _initialValue = (int)_retractionSpeed * 150;
+            }
         }
     }
 }

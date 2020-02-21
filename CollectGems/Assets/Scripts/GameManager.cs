@@ -2,54 +2,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //public static GameManager singleton;
-    [SerializeField]
-    private List<TMPro.TextMeshProUGUI> text;
 
-    public int expectedMoney;
-    private int currentMoney;
-    public int totalTimer;
-
-    //private void Awake()
-    //{
-    //    if (singleton != null)
-    //    {
-    //        singleton = this;
-    //    }
-    //    else
-    //        Destroy(gameObject);
-
-    //    DontDestroyOnLoad(gameObject);
-    //}
-    private void start()
+    public TMPro.TextMeshProUGUI[] textMeshes;
+    public int expectedValue;
+    private int currentValue;
+    public int timer;
+    private void Start()
     {
-        text[2].text = expectedMoney.ToString();
-        InvokeRepeating("decreasetoTime", 0, 1f);
-
+        textMeshes[0].text = expectedValue.ToString();
+        InvokeRepeating("decreaseValue", 1, 1.0f);
+        //setLevel();
     }
-    public void increasetoMoney(int value)
+
+    public void increaseCurrentValue(int value)
     {
-        currentMoney += value;
-        text[1].text = currentMoney.ToString();
+        currentValue += value;
+        textMeshes[1].text = currentValue.ToString();
     }
-    private void decreasetoTime()
+    private void decreaseValue()
     {
-        totalTimer--;
-        text[0].text = totalTimer.ToString();
-        if (totalTimer <= 0)
+        timer--;
+        textMeshes[2].text = "Timer : " + timer.ToString();
+
+        if (timer <= 0)
         {
-            if (currentMoney >= expectedMoney)
+            if (currentValue >= expectedValue)
             {
-                Debug.Log("Go Other Level");
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             else
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
+        else
+        {
+            if (currentValue >= expectedValue)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+        }
     }
+    //private void setLevel()
+    //{
+    //    if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("saveit"))
+    //    {
+    //        PlayerPrefs.SetInt("saveit", SceneManager.GetActiveScene().buildIndex);
+    //    }
+    //}
 }
